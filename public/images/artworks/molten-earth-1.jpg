@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c9a96e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="lava" cx="40%" cy="50%" r="40%">
+      <stop offset="0%" style="stop-color:#f9e79f;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <ellipse cx="350" cy="500" rx="200" ry="250" fill="url(#lava)"/>
+  <text x="400" y="950" font-family="Georgia,serif" font-size="20" fill="white" text-anchor="middle" opacity="0.5">Molten Earth</text>
+</svg>

@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================
+   BASE LAYER — Global Defaults
+   ============================ */
+@layer base {
+  /* Smooth scrolling & base typography */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal font-sans;
+    overflow-x: hidden;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  h1 {
+    @apply text-display font-bold;
+  }
+
+  h2 {
+    @apply text-heading font-bold;
+  }
+
+  h3 {
+    @apply text-subheading font-semibold;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-gray-soft;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-gold/20 text-charcoal;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold/40 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+}
+
+/* ============================
+   COMPONENT LAYER — Reusable
+   ============================ */
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-cream-50/80 backdrop-blur-glass border border-cream-300/50;
+  }
+
+  .glass-dark {
+    @apply bg-charcoal/80 backdrop-blur-glass border border-charcoal-light/30;
+  }
+
+  /* Text gradient */
+  .text-gradient-gold {
+    @apply bg-gradient-gold bg-clip-text text-transparent;
+  }
+
+  /* Shimmer loading skeleton */
+  .skeleton {
+    @apply bg-shimmer-gradient bg-[length:400%_100%] animate-shimmer rounded-xl;
+    background-color: theme('colors.cream.300');
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 xl:px-28;
+  }
+
+  /* Container max width */
+  .container-wide {
+    @apply max-w-[1400px] mx-auto section-padding;
+  }
+
+  /* Divider with gold accent */
+  .divider-gold {
+    @apply w-16 h-[2px] bg-gradient-gold mx-auto;
+  }
+
+  /* Image hover zoom container */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-premium;
+  }
+
+  .img-zoom:hover img {
+    @apply scale-110;
+  }
+
+  /* Availability badges */
+  .badge-available {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium
+           bg-available/10 text-available border border-available/20;
+  }
+
+  .badge-sold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium
+           bg-sold/10 text-sold border border-sold/20;
+  }
+
+  .badge-on-hold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium
+           bg-onHold/10 text-onHold border border-onHold/20;
+  }
+}
+
+/* ============================
+   UTILITY LAYER
+   ============================ */
+@layer utilities {
+  /* Hide scrollbar but keep scroll functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Aspect ratios for artwork cards */
+  .aspect-artwork {
+    aspect-ratio: 3 / 4;
+  }
+
+  .aspect-artwork-wide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect-artwork-square {
+    aspect-ratio: 1 / 1;
+  }
+}
