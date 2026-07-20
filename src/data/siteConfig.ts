@@ -7,23 +7,23 @@
 
 export const siteConfig = {
   // Brand
-  name: 'Fluid Art Studio',
-  tagline: 'Where Colors Flow Freely',
+  name: 'Pravāha Kalā',
+  tagline: 'The Art of Flow',
   description:
-    'Discover unique fluid art paintings — original artworks, resin art, and limited edition prints. Handcrafted with passion, each piece tells a story of color and movement.',
+    'Discover handcrafted fluid art inspired by the beauty of flow. Original paintings and resin creations where every piece is one of a kind.',
 
   // Contact
   contact: {
-    email: 'hello@fluidartstudio.com',
-    phone: '+91 98765 43210',
-    whatsapp: '+919876543210',
-    address: 'Mumbai, Maharashtra, India',
+    email: 'rithikashyam94@gmail.com',
+    phone: '+91 63029 33904',
+    whatsapp: '+9163029 33904',
+    address: 'Bengaluru, Karnataka, India',
   },
 
   // Social Media
   social: {
-    instagram: 'https://instagram.com/fluidartstudio',
-    instagramHandle: '@fluidartstudio',
+    instagram: 'https://www.instagram.com/rithika.shyam/',
+    instagramHandle: '@rithika.shyam',
     youtube: '',
     pinterest: '',
     facebook: '',
@@ -46,9 +46,9 @@ export const siteConfig = {
 
   // SEO
   seo: {
-    title: 'Fluid Art Studio — Original Fluid Art & Resin Paintings',
+    title: 'Pravāha Kalā — Original Fluid Art & Resin Paintings',
     description:
-      'Discover stunning original fluid art paintings, resin artworks, and limited edition prints. Each piece is handcrafted with love and passion. Based in India, shipping nationwide.',
+      'Discover original fluid art paintings, resin artworks, and limited-edition creations, each handcrafted with passion and inspired by the beauty of flow. Proudly created in India and shipped nationwide.',
     keywords: [
       'fluid art',
       'resin art',
@@ -62,7 +62,7 @@ export const siteConfig = {
       'limited edition prints',
     ],
     ogImage: '/images/og-image.jpg',
-    url: 'https://fluidartstudio.com',
+    url: 'https://pravahakala.com',
   },
 
   // Navigation
