@@ -73,13 +73,10 @@ export default function Navbar() {
                     {item.label}
                     {isActive && (
                       <motion.span
-                        layoutId="navbar-active"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-gold rounded-full"
-                        transition={{
-                          type: 'spring',
-                          stiffness: 400,
-                          damping: 30,
-                        }}
+                        transition={{ duration: 0.2 }}
                       />
                     )}
                   </motion.span>

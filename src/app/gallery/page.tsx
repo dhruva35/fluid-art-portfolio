@@ -100,7 +100,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Filters & Search Bar */}
-      <section className="sticky top-18 md:top-22 z-30 bg-cream-100/95 backdrop-blur-xl border-b border-cream-300/40 py-4">
+      <section className="bg-cream-100/95 border-b border-cream-300/40 py-4">
         <div className="container-wide">
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-4">
