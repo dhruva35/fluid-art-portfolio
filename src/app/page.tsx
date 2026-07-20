@@ -201,6 +201,7 @@ export default function HomePage() {
                 key={artwork.slug}
                 artwork={artwork}
                 index={i}
+                hidePrice={true}
                 onInquire={handleInquire}
               />
             ))}
@@ -279,6 +280,7 @@ export default function HomePage() {
                   key={artwork.slug}
                   artwork={artwork}
                   index={i}
+                  hidePrice={true}
                   onInquire={handleInquire}
                 />
               ))}

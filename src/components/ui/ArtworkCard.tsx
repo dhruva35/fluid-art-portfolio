@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 interface ArtworkCardProps {
   artwork: Artwork;
   index?: number;
+  hidePrice?: boolean;
   onInquire?: (artwork: Artwork) => void;
 }
 
@@ -19,6 +20,7 @@ interface ArtworkCardProps {
 export default function ArtworkCard({
   artwork,
   index = 0,
+  hidePrice = false,
   onInquire,
 }: ArtworkCardProps) {
   const availabilityBadge = {
@@ -65,19 +67,13 @@ export default function ArtworkCard({
               </motion.div>
             </div>
 
-            {/* Availability Badge */}
-            <div className="absolute top-3 left-3">
-              <span className={badge.className}>{badge.label}</span>
-            </div>
-
-            {/* New Arrival Badge */}
-            {artwork.newArrival && (
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gold text-charcoal-dark">
-                  New
-                </span>
+            {/* Availability Badge (Only show if not available) */}
+            {artwork.availability !== 'available' && (
+              <div className="absolute top-3 left-3">
+                <span className={badge.className}>{badge.label}</span>
               </div>
             )}
+
           </div>
         </Link>
 
@@ -92,9 +88,13 @@ export default function ArtworkCard({
           <p className="text-xs text-gray-muted mb-3">{artwork.dimensions}</p>
 
           <div className="flex items-center justify-between">
-            <span className="font-serif text-lg font-bold text-charcoal">
-              {artwork.price}
-            </span>
+            {!hidePrice ? (
+              <span className="font-serif text-lg font-bold text-charcoal">
+                {artwork.price}
+              </span>
+            ) : (
+              <div />
+            )}
             <div className="flex items-center gap-2">
               {artwork.availability === 'available' && onInquire && (
                 <button
