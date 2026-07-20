@@ -29,7 +29,7 @@ export default function SectionHeading({
         className={`divider-gold mb-4 ${align === 'left' ? 'mx-0' : 'mx-auto'}`}
       />
       {subtitle && (
-        <p className="text-gray-soft text-base md:text-lg max-w-2xl leading-relaxed ${align === 'center' ? 'mx-auto' : ''}">
+        <p className={`text-gray-soft text-base md:text-lg max-w-2xl leading-relaxed ${align === 'center' ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}

@@ -136,26 +136,6 @@ export default function HomePage() {
               </Button>
             </motion.div>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 rounded-full border-2 border-charcoal/20 flex items-start justify-center p-1.5"
-            >
-              <motion.div
-                animate={{ height: ['4px', '12px', '4px'] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 bg-gold/60 rounded-full"
-              />
-            </motion.div>
-          </motion.div>
         </div>
       </section>
 
@@ -242,19 +222,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
             <AnimatedSection direction="left">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated">
-                <div className="absolute inset-0 bg-gradient-to-br from-cream-300 via-cream-400 to-gold/20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Palette size={64} className="text-gold/40 mx-auto mb-4" />
-                    <p className="text-gray-soft text-sm font-medium">
-                      Artist Portrait
-                    </p>
-                    <p className="text-gray-muted text-xs mt-1">
-                      Replace with actual photo
-                    </p>
-                  </div>
-                </div>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elevated bg-cream-200">
+                <Image
+                  src="/images/artist.jpg"
+                  alt="Artist Portrait"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </AnimatedSection>
 

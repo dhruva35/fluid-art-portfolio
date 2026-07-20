@@ -15,6 +15,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { siteConfig } from '@/data/siteConfig';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const faqs = [
   {
@@ -84,18 +85,13 @@ export default function AboutPage() {
             {/* Portrait */}
             <AnimatedSection direction="left">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated bg-cream-200">
-                <div className="absolute inset-0 bg-gradient-to-br from-cream-300 via-cream-400 to-gold/20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Palette size={80} className="text-gold/30 mx-auto mb-4" />
-                    <p className="text-gray-soft text-sm font-medium">
-                      Artist Portrait
-                    </p>
-                    <p className="text-gray-muted text-xs mt-1">
-                      Replace with actual photo
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/artist.jpg"
+                  alt="Artist Portrait"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </AnimatedSection>
 
