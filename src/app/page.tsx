@@ -228,6 +228,7 @@ export default function HomePage() {
                   src="/images/artist.jpg"
                   alt="Artist Portrait"
                   fill
+                  unoptimized={true}
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />

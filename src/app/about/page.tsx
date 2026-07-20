@@ -87,8 +87,9 @@ export default function AboutPage() {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated bg-cream-200">
                 <Image
                   src="/images/artist.jpg"
-                  alt="Artist Portrait"
+                  alt="Artist in the studio"
                   fill
+                  unoptimized={true}
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
